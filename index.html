@@ -1,0 +1,509 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Our 2nd Anniversary | Two Years of Loving You</title>
+  <meta name="description" content="A romantic interactive celebration of two unforgettable years together — 730 days of love, laughter, and endless memories.">
+  
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Alex+Brush&family=Cormorant+Garamond:ital,wght@0,400;0,600;0,700;1,400;1,600&family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  
+  <!-- Stylesheet -->
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <!-- Ambient Animated Background Canvas -->
+  <canvas id="ambient-canvas"></canvas>
+  
+  <!-- Ambient Atmospheric Glows -->
+  <div class="ambient-glow-1"></div>
+  <div class="ambient-glow-2"></div>
+
+  <div class="page-wrapper">
+    
+    <!-- Top Navigation Bar -->
+    <header>
+      <nav class="site-nav" aria-label="Main Navigation">
+        <a href="#hero" class="nav-brand" aria-label="Home">
+          <div class="nav-brand-logo">♥</div>
+          <div>
+            <div class="nav-brand-text" id="nav-brand-names">Lucas & Maya</div>
+            <div class="nav-brand-sub">2nd Anniversary</div>
+          </div>
+        </a>
+
+        <ul class="nav-links">
+          <li><a href="#hero">Counter</a></li>
+          <li><a href="#letter-section">Love Letter</a></li>
+          <li><a href="#timeline-section">Our Journey</a></li>
+          <li><a href="#reasons-section">Why I Love You</a></li>
+          <li><a href="#interactive-section">Quiz & Dreams</a></li>
+        </ul>
+
+        <div class="nav-actions">
+          <!-- Ambient Music Player Button -->
+          <button id="audio-toggle-btn" class="audio-toggle-btn" aria-label="Toggle Romantic Music">
+            <div class="audio-equalizer">
+              <span class="audio-bar"></span>
+              <span class="audio-bar"></span>
+              <span class="audio-bar"></span>
+            </div>
+            <span id="audio-btn-label">Play: A Thousand Years ♫</span>
+          </button>
+
+          <!-- Personalize Button -->
+          <button id="open-settings-btn" class="btn-personalize" title="Personalize Names & Date" aria-label="Settings">
+            ⚙
+          </button>
+        </div>
+      </nav>
+    </header>
+
+    <!-- Main Content -->
+    <main>
+      
+      <!-- HERO SECTION -->
+      <section id="hero" class="hero-section">
+        <div class="hero-content">
+          <div class="badge-anniversary">
+            <span>✨</span>
+            <span id="hero-badge-text">Celebrating 2 Magical Years</span>
+            <span>✨</span>
+          </div>
+
+          <h1 class="hero-title">
+            Two Years of Loving You,
+            <span class="hero-names" id="hero-names-display">Lucas & Maya</span>
+          </h1>
+
+          <p class="hero-subtitle" id="hero-tagline">
+            "730 days of shared laughter, warm hugs, late-night talks, and realizing every day that choosing you was the easiest decision of my life."
+          </p>
+
+          <!-- Live Love Counter Box -->
+          <div class="counter-box" aria-label="Anniversary Counter">
+            <div class="counter-header">
+              <span class="counter-title">
+                <span class="counter-pulse-dot"></span>
+                <span>Time Together</span>
+              </span>
+              <span id="counter-since-date" style="font-size: 0.8rem; color: var(--text-muted);">Since October 15, 2024</span>
+            </div>
+
+            <div class="counter-grid">
+              <div class="counter-item">
+                <div class="counter-num" id="counter-days">730</div>
+                <div class="counter-label">Days</div>
+              </div>
+              <div class="counter-item">
+                <div class="counter-num" id="counter-hours">00</div>
+                <div class="counter-label">Hours</div>
+              </div>
+              <div class="counter-item">
+                <div class="counter-num" id="counter-minutes">00</div>
+                <div class="counter-label">Minutes</div>
+              </div>
+              <div class="counter-item">
+                <div class="counter-num" id="counter-seconds">00</div>
+                <div class="counter-label">Seconds</div>
+              </div>
+            </div>
+
+            <div class="counter-footer">
+              <span>💖</span>
+              <span id="counter-message">Every second with you is my favorite memory</span>
+            </div>
+          </div>
+
+          <!-- Hero Actions -->
+          <div class="hero-cta">
+            <a href="#letter-section" class="btn-primary" id="btn-hero-letter">
+              <span>Open My Love Letter</span>
+              <span>💌</span>
+            </a>
+            <a href="#timeline-section" class="btn-secondary">
+              <span>Explore Our Journey</span>
+              <span>✨</span>
+            </a>
+          </div>
+        </div>
+
+        <!-- Hero Visual Polaroid -->
+        <div class="hero-visual">
+          <div class="polaroid-frame" id="hero-polaroid" title="Click to view full photo">
+            <div class="floating-tape"></div>
+            <div class="polaroid-img-wrapper">
+              <img src="assets/images/hero_sunset.jpg" alt="Romantic couple at sunset" class="polaroid-img" id="hero-main-img">
+            </div>
+            <span class="polaroid-caption" id="hero-img-caption">Two Years of Us • Forever to Go</span>
+          </div>
+
+          <div class="floating-badge floating-badge-1">
+            <span style="font-size: 1.2rem;">🌹</span>
+            <span style="font-size: 0.85rem; font-weight: 600;">730 Days & Counting</span>
+          </div>
+
+          <div class="floating-badge floating-badge-2">
+            <span style="font-size: 1.2rem;">💫</span>
+            <span style="font-size: 0.85rem; font-weight: 600;">My Favorite Person</span>
+          </div>
+        </div>
+      </section>
+
+      <!-- SECTION: INTERACTIVE WAX SEAL LOVE LETTER -->
+      <section id="letter-section" class="section letter-section">
+        <div class="section-header">
+          <span class="section-tag">A Special Note Just For You</span>
+          <h2 class="section-title">The Wax Seal Letter</h2>
+          <p class="section-desc">Click the wax seal to break it open and read the secret anniversary message sealed inside.</p>
+        </div>
+
+        <div class="envelope-container">
+          <!-- Envelope Closed State -->
+          <div class="envelope-card" id="envelope-card">
+            <div class="envelope-closed-state" id="envelope-closed-view">
+              <div class="wax-seal-wrapper">
+                <button class="wax-seal" id="btn-break-seal" aria-label="Break Wax Seal">
+                  <span class="wax-seal-inner">II</span>
+                </button>
+              </div>
+              <h3 class="envelope-prompt" id="envelope-recipient-text">To My Darling, On Our 2nd Anniversary</h3>
+              <p class="envelope-hint">
+                <span>✦</span>
+                <span>Click the wax seal to reveal</span>
+                <span>✦</span>
+              </p>
+            </div>
+
+            <!-- Unfolded Letter (Shown on click) -->
+            <article class="letter-paper" id="letter-paper" aria-label="Love Letter Content">
+              <div class="letter-watermark">♥</div>
+              <div class="letter-date" id="letter-display-date">October 15, 2026</div>
+              <h3 class="letter-salutation" id="letter-salutation">My Dearest Love,</h3>
+              <div class="letter-body" id="letter-content-text">
+Happy 2nd Anniversary!
+
+Two years ago, we began a story that has brought more warmth, laughter, and pure happiness into my world than I ever thought possible. They say the 2nd anniversary is the 'cotton anniversary' — representing how two individual threads weave together to create something unbreakable and gentle.
+
+Looking back over these 730 days, I am endlessly grateful for everything: the quiet mornings, the silly inside jokes, the adventures we took, and even the simple days spent doing nothing at all as long as we were together.
+
+Thank you for being my anchor, my sweetest comfort, and my greatest adventure. I fell in love with you on day one, and somehow I fall a little deeper every single morning.
+
+Here's to two unforgettable years, and to a lifetime more of holding your hand.
+              </div>
+              <div class="letter-signoff" id="letter-signature-text">Forever & Always Yours, ♥</div>
+              <div class="letter-seal-footer">
+                <span style="font-size: 0.85rem; color: #8c6a78;">Year 2 • Unfolded with Love</span>
+                <button class="btn-refold" id="btn-refold-letter">Fold Letter Back Up</button>
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <!-- SECTION: OUR JOURNEY MILESTONES TIMELINE -->
+      <section id="timeline-section" class="section">
+        <div class="section-header">
+          <span class="section-tag">Chapter by Chapter</span>
+          <h2 class="section-title">Our 2-Year Journey</h2>
+          <p class="section-desc">From the moment our eyes first met to 730 days of sweet memories, here are some of our most cherished chapters.</p>
+        </div>
+
+        <div class="timeline-wrapper">
+          <div class="timeline-line"></div>
+
+          <!-- Milestone 1 -->
+          <div class="timeline-item">
+            <div class="timeline-content">
+              <div class="milestone-img-wrapper" data-lightbox="assets/images/first_date.jpg" data-caption="The day our journey started with coffee and endless smiles.">
+                <img src="assets/images/first_date.jpg" alt="Our First Date" class="milestone-img">
+              </div>
+              <div class="milestone-meta">
+                <span class="milestone-date">Chapter 1 • The Beginning</span>
+                <span class="milestone-tag">First Date</span>
+              </div>
+              <h3 class="milestone-title">The Spark That Started It All</h3>
+              <p class="milestone-desc">We met for a simple coffee that turned into hours of non-stop conversation, laughter, and realizing neither of us wanted the date to end.</p>
+              <div class="milestone-footer">
+                <button class="btn-like-memory" data-memory-id="1">
+                  <span>♥</span>
+                  <span class="like-count">124</span> likes
+                </button>
+                <span style="font-size: 0.8rem; color: var(--gold-champagne);">Day 1</span>
+              </div>
+            </div>
+            <div class="timeline-center-node">
+              <div class="timeline-badge">☕</div>
+            </div>
+            <div class="timeline-spacer"></div>
+          </div>
+
+          <!-- Milestone 2 -->
+          <div class="timeline-item">
+            <div class="timeline-content">
+              <div class="milestone-img-wrapper" data-lightbox="assets/images/travel_adventure.jpg" data-caption="Our unforgettable beach getaway watching the sunset over the waves.">
+                <img src="assets/images/travel_adventure.jpg" alt="Our First Trip" class="milestone-img">
+              </div>
+              <div class="milestone-meta">
+                <span class="milestone-date">Chapter 2 • Month 6</span>
+                <span class="milestone-tag">First Trip</span>
+              </div>
+              <h3 class="milestone-title">Our First Vacation & Adventure</h3>
+              <p class="milestone-desc">Packed our bags and headed to the coast. Watching the sunset with your hand in mine made me realize you are my home anywhere we go.</p>
+              <div class="milestone-footer">
+                <button class="btn-like-memory" data-memory-id="2">
+                  <span>♥</span>
+                  <span class="like-count">248</span> likes
+                </button>
+                <span style="font-size: 0.8rem; color: var(--gold-champagne);">Month 6</span>
+              </div>
+            </div>
+            <div class="timeline-center-node">
+              <div class="timeline-badge">🌊</div>
+            </div>
+            <div class="timeline-spacer"></div>
+          </div>
+
+          <!-- Milestone 3 -->
+          <div class="timeline-item">
+            <div class="timeline-content">
+              <div class="milestone-img-wrapper" data-lightbox="assets/images/hero_sunset.jpg" data-caption="Reaching our 365-day milestone standing on top of the world.">
+                <img src="assets/images/hero_sunset.jpg" alt="One Year Anniversary" class="milestone-img">
+              </div>
+              <div class="milestone-meta">
+                <span class="milestone-date">Chapter 3 • Year 1</span>
+                <span class="milestone-tag">1st Anniversary</span>
+              </div>
+              <h3 class="milestone-title">One Year Down, Forever To Go</h3>
+              <p class="milestone-desc">365 days flew by like a dream. Celebrating our first full year together proved that our love only grows stronger and deeper with time.</p>
+              <div class="milestone-footer">
+                <button class="btn-like-memory" data-memory-id="3">
+                  <span>♥</span>
+                  <span class="like-count">365</span> likes
+                </button>
+                <span style="font-size: 0.8rem; color: var(--gold-champagne);">Year 1</span>
+              </div>
+            </div>
+            <div class="timeline-center-node">
+              <div class="timeline-badge">✨</div>
+            </div>
+            <div class="timeline-spacer"></div>
+          </div>
+
+          <!-- Milestone 4 -->
+          <div class="timeline-item">
+            <div class="timeline-content">
+              <div class="milestone-img-wrapper" data-lightbox="assets/images/anniversary_toast.jpg" data-caption="A candlelit toast celebrating 730 days of pure happiness.">
+                <img src="assets/images/anniversary_toast.jpg" alt="Two Years Together" class="milestone-img">
+              </div>
+              <div class="milestone-meta">
+                <span class="milestone-date">Chapter 4 • Year 2 Today</span>
+                <span class="milestone-tag">2nd Anniversary</span>
+              </div>
+              <h3 class="milestone-title">730 Days of Us • The Best is Yet to Come</h3>
+              <p class="milestone-desc">Two whole years of shared dreams, overcoming challenges side-by-side, and knowing that every tomorrow with you is a gift.</p>
+              <div class="milestone-footer">
+                <button class="btn-like-memory" data-memory-id="4">
+                  <span>♥</span>
+                  <span class="like-count">730</span> likes
+                </button>
+                <span style="font-size: 0.8rem; color: var(--gold-champagne);">Today</span>
+              </div>
+            </div>
+            <div class="timeline-center-node">
+              <div class="timeline-badge">🥂</div>
+            </div>
+            <div class="timeline-spacer"></div>
+          </div>
+
+        </div>
+      </section>
+
+      <!-- SECTION: REASONS WHY I LOVE YOU & LOVE JAR -->
+      <section id="reasons-section" class="section">
+        <div class="section-header">
+          <span class="section-tag">Straight From My Heart</span>
+          <h2 class="section-title">Reasons Why I Love You</h2>
+          <p class="section-desc">Flip each card to discover why you mean the world to me, or reach into the jar to draw a surprise love note.</p>
+        </div>
+
+        <div class="reasons-layout">
+          <!-- Enchanted Love Jar Card -->
+          <div class="reason-jar-card">
+            <div class="jar-icon-container">🍯</div>
+            <h3 class="jar-title">The Enchanted Love Jar</h3>
+            <p class="jar-desc">Whenever you want a reminder of how cherished you are, reach inside this jar to pull out a secret handwritten reason.</p>
+            <button class="btn-draw-reason" id="btn-draw-reason">
+              <span>✦</span>
+              <span>Draw a Love Note From the Jar</span>
+              <span>✦</span>
+            </button>
+
+            <!-- Revealed Note Container -->
+            <div class="revealed-reason-scroll" id="revealed-scroll">
+              <span class="revealed-reason-number" id="revealed-num">Note #42</span>
+              <p class="revealed-reason-text" id="revealed-text">"The way your eyes crinkle with genuine joy whenever you laugh at our silly inside jokes."</p>
+            </div>
+          </div>
+
+          <!-- Flip Cards Grid -->
+          <div class="reasons-grid" id="reasons-cards-grid">
+            <!-- Rendered dynamically by script.js -->
+          </div>
+        </div>
+      </section>
+
+      <!-- SECTION: INTERACTIVE LOVE QUIZ & BUCKET LIST -->
+      <section id="interactive-section" class="section">
+        <div class="section-header">
+          <span class="section-tag">Play & Dream Together</span>
+          <h2 class="section-title">Memories Quiz & Future Bucket List</h2>
+          <p class="section-desc">Test your memory on our favorite moments and explore all the wonderful dreams we're going to achieve next.</p>
+        </div>
+
+        <div class="interactive-duo">
+          
+          <!-- Memory Quiz Card -->
+          <div class="quiz-card">
+            <div class="card-heading">
+              <span class="card-heading-icon">💖</span>
+              <h3 class="card-heading-title">How Well Do You Remember Us?</h3>
+            </div>
+
+            <div id="quiz-container">
+              <div class="quiz-question-box">
+                <p class="quiz-question-text" id="quiz-question">Loading question...</p>
+                <div class="quiz-options" id="quiz-options">
+                  <!-- Options injected via JS -->
+                </div>
+                <div class="quiz-status" id="quiz-status"></div>
+              </div>
+            </div>
+
+            <div style="display: flex; justify-content: space-between; align-items: center; margin-top: 1rem;">
+              <span id="quiz-score-badge" style="font-size: 0.85rem; color: var(--gold-champagne);">Score: 0 / 4</span>
+              <button id="btn-next-quiz" class="btn-secondary" style="padding: 0.5rem 1.25rem; font-size: 0.85rem; display: none;">Next Memory ➜</button>
+            </div>
+          </div>
+
+          <!-- Future Bucket List Card -->
+          <div class="bucket-card">
+            <div class="card-heading">
+              <span class="card-heading-icon">✈️</span>
+              <h3 class="card-heading-title">Our Next Adventures Bucket List</h3>
+            </div>
+
+            <div class="bucket-progress">
+              <div class="progress-labels">
+                <span>Dreams Completed</span>
+                <span id="bucket-progress-text">2 of 6 Done</span>
+              </div>
+              <div class="progress-bar-bg">
+                <div class="progress-bar-fill" id="bucket-progress-fill"></div>
+              </div>
+            </div>
+
+            <ul class="bucket-list-items" id="bucket-list-items">
+              <!-- Rendered via JS -->
+            </ul>
+
+            <form class="add-bucket-form" id="add-bucket-form">
+              <input type="text" id="bucket-input" class="bucket-input" placeholder="Add a new dream adventure..." required>
+              <button type="submit" class="btn-add-bucket">+ Add</button>
+            </form>
+          </div>
+
+        </div>
+      </section>
+
+      <!-- SECTION: ANNIVERSARY TOAST & FINALE -->
+      <section id="toast-section" class="toast-section">
+        <div class="toast-card">
+          <div class="toast-icon">🥂</div>
+          <p class="toast-quote" id="toast-quote-text">
+            "I loved you yesterday, I love you still, I always have, I always will. Happy 2nd Anniversary, my darling."
+          </p>
+          <span class="toast-author" id="toast-author-name">Forever Yours, Lucas ♥ Maya</span>
+          
+          <button class="btn-celebrate-toast" id="btn-celebrate-toast">
+            <span>🎉</span>
+            <span>A Toast To Us: Celebrate!</span>
+            <span>✨</span>
+          </button>
+        </div>
+      </section>
+
+    </main>
+
+    <!-- Footer -->
+    <footer style="text-align: center; margin-top: 4rem; color: var(--text-muted); font-size: 0.85rem;">
+      <p>Handcrafted with endless love for our 2nd Anniversary • 730 Days & A Lifetime More</p>
+    </footer>
+
+  </div>
+
+  <!-- IMAGE LIGHTBOX MODAL -->
+  <div class="lightbox-modal" id="lightbox-modal" role="dialog" aria-modal="true" aria-hidden="true">
+    <div class="lightbox-content">
+      <button class="btn-close-lightbox" id="btn-close-lightbox" aria-label="Close photo">✕</button>
+      <img src="" alt="Enlarged Memory" class="lightbox-img" id="lightbox-img">
+      <p class="lightbox-caption" id="lightbox-caption"></p>
+    </div>
+  </div>
+
+  <!-- PERSONALIZATION SETTINGS MODAL -->
+  <div class="modal-overlay" id="settings-modal" role="dialog" aria-modal="true" aria-hidden="true">
+    <div class="modal-card">
+      <div class="modal-header">
+        <h3 class="modal-title">Personalize Your Story ✨</h3>
+        <button class="btn-close-modal" id="btn-close-settings" aria-label="Close settings">✕</button>
+      </div>
+
+      <form id="settings-form">
+        <div class="form-row">
+          <div class="form-group">
+            <label class="form-label" for="setting-partner1">Your Name</label>
+            <input type="text" id="setting-partner1" class="form-control" required>
+          </div>
+          <div class="form-group">
+            <label class="form-label" for="setting-partner2">Her Name (Girlfriend)</label>
+            <input type="text" id="setting-partner2" class="form-control" required>
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label class="form-label" for="setting-anniversary-date">Anniversary Start Date & Time</label>
+          <input type="datetime-local" id="setting-anniversary-date" class="form-control" required>
+          <small style="color: var(--text-muted); font-size: 0.75rem; display: block; margin-top: 0.3rem;">
+            Defaults to October 15, 2024 (2 years ago). Adjust to match your exact anniversary!
+          </small>
+        </div>
+
+        <div class="form-group">
+          <label class="form-label" for="setting-tagline">Hero Romantic Quote</label>
+          <input type="text" id="setting-tagline" class="form-control">
+        </div>
+
+        <div class="form-group">
+          <label class="form-label" for="setting-letter">Love Letter Message</label>
+          <textarea id="setting-letter" class="form-control" rows="6"></textarea>
+        </div>
+
+        <div class="modal-footer">
+          <button type="button" class="btn-secondary" id="btn-reset-settings" style="font-size: 0.9rem;">Reset Defaults</button>
+          <button type="submit" class="btn-primary" style="font-size: 0.9rem;">Save & Update Live 💖</button>
+        </div>
+      </form>
+    </div>
+  </div>
+
+  <!-- Scripts -->
+  <script src="audio.js"></script>
+  <script src="canvas-effects.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
